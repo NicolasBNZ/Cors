@@ -18,6 +18,7 @@ https://www.youtube.com/watch?v=Agu5dfWXQzA
 Si dans votre site vous avez utilisé une image d'une url externe et que vous avez une image cassée.
 ![image](https://user-images.githubusercontent.com/75088424/150318851-ede8c42e-3b5c-42b3-a354-4f5464312f58.png)
 ou si votre site essaie de ramener des datas de votre API et que vous avez cette erreur
+![erreurCors](https://user-images.githubusercontent.com/75088424/150319783-72f28081-499b-4e51-a993-fba9af69ca34.JPG)
 C'est qu'il faut absolument connaitre les cors! 
 
 
