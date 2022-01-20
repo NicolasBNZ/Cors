@@ -10,10 +10,39 @@ https://www.youtube.com/watch?v=irpWV4effNE
 Explication de l'origine (http...)
 https://www.youtube.com/watch?v=0IMz8d9Cby4
 
+Bonne définition, netscape
+https://www.youtube.com/watch?v=Agu5dfWXQzA
+
+
+## Intro
+Si dans votre site vous avez utilisé une image d'une url externe et que vous avez une image cassée.
+![image](https://user-images.githubusercontent.com/75088424/150318851-ede8c42e-3b5c-42b3-a354-4f5464312f58.png)
+ou si votre site essaie de ramener des datas de votre API et que vous avez cette erreur
+C'est qu'il faut absolument connaitre les cors! 
+
 
 ## Qu’est ce qu’un cors ?
-Un fonctionnalité, en quelques lignes de code du côté d’un serveur A qui va permettre au navigateur côté client de pouvoir faire des requêtes à un serveur B, C, D…
-En effet, pour des raisons de sécurité, votre navigateur ne peut XX qu'avec le serveur
+Une fonctionnalité, en quelques lignes de code du côté d’un serveur A qui va permettre au navigateur côté client de pouvoir faire des requêtes à un serveur B, C, D… Depuis 1995, Netscape 2, il y a cette règle de sécurité: "same-origin policy" (politique de même orgine). «  Cross-origin resource sharing » (CORS) ou « partage des ressources entre origines multiples »
+Oui question d'origine différentes dans des requêtes
+
+### Comment ça marche en théorie ? 
+MDN
+https://developer.mozilla.org/fr/docs/Web/HTTP/CORS
+Le CORS est un mécanisme qui consiste à ajouter des en-têtes HTTP afin de permettre à un utilisateur d'accéder à des ressources d'un serveur situé sur une autre origine que le site courant. Un utilisateur réalise une requête HTTP multi-origine (cross-origin) lorsqu'il demande une ressource provenant d'un domaine, d'un protocole ou d'un port différent de ceux utilisés pour la page courante.
+
+Pour des raisons de sécurité, les requêtes HTTP multi-origine émises depuis les scripts sont restreintes. Ainsi, XMLHttpRequest et l'API Fetch respectent la règle d'origine unique. Cela signifie qu'une application web qui utilise ces API peut uniquement émettre des requêtes vers la même origine que celle à partir de laquelle l'application a été chargée, sauf si des en-têtes CORS sont utilisés.
+
+![image](https://user-images.githubusercontent.com/75088424/150316751-848d8233-1350-4503-9882-3619e4bf75fd.png)
+
+Le CORS permet de prendre en charge des requêtes multi-origines sécurisées et des transferts de données entre des navigateurs et des serveurs web. Les navigateurs récents utilisent le CORS dans une API contenante comme XMLHttpRequest ou Fetch pour aider à réduire les risques de requêtes HTTP multi-origines.
+
+
+
+
+
+
+Vous avez déjà vu cette erreur? C'est un problème de cors.
+AJAX
 
 En effet
 ![image](https://user-images.githubusercontent.com/75088424/150301214-5ff2790b-36bd-4438-9661-ad5ed8ce28bc.png)
