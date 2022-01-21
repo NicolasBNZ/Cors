@@ -40,10 +40,10 @@ Il y a quelques exceptions (sur MDN comme une image cross origin)
 ### Comment ça marche ? 
 MDN
 https://developer.mozilla.org/fr/docs/Web/HTTP/CORS
-Le mécanisme consiste à ajouter dans des en-têtes HTTP un ou des user-agent (=information échangée sous forme de chaîne de caractères, entre le navigateur utilisé par l'internaute et le serveur du site web visité. Cette information est directement incluse dans la requête HTTP) afin donc de permettre à un utilisateur d'accéder aux ressources d'un serveur situé sur une autre origine que le site courant. 
-l'utilisateur réalise alors une requête HTTP multi-origine (cross-origin).
+Le mécanisme consiste à ajouter dans des en-têtes HTTP un ou des user-agent (=information échangée sous forme de chaîne de caractères, entre le navigateur utilisé par l'internaute et le serveur du site web visité) afin donc de permettre à un utilisateur d'accéder aux ressources d'un serveur situé sur une autre origine que le site courant. 
+l'utilisateur réalise alors une requête HTTP multi-origine (cross-origin) sécurisés.
 
-Le CORS permet de prendre en charge des requêtes multi-origines sécurisées et des transferts de données entre des navigateurs et des serveurs web. Les navigateurs récents utilisent le CORS dans une API contenante comme XMLHttpRequest ou Fetch pour aider à réduire les risques de requêtes HTTP multi-origines.
+
 
 Le standard CORS fonctionne grâce à l'ajout de nouveaux en-têtes HTTP qui permettent aux serveurs de décrire un ensemble d'origines autorisées pour lire l'information depuis un navigateur web. De plus, pour les méthodes de requêtes HTTP qui entraînent des effets de bord sur les données côté serveur (notamment pour les méthodes en dehors de GET ou pour les méthodes POST utilisées avec certains types MIME), la spécification indique que les navigateurs doivent effectuer une requête préliminaire (« preflight request ») et demander au serveur les méthodes prises en charges via une requête utilisant la méthode OPTIONS puis, après approbation du serveur, envoyer la vraie requête. Les serveurs peuvent également indiquer aux clients s'il est nécessaire de fournir des informations d'authentification (que ce soit des cookies ou des données d'authentification HTTP) avec les requêtes.
 
@@ -55,6 +55,8 @@ Quand le navigateur fait une requête, il ajoute
 
 Vous avez déjà vu cette erreur? C'est un problème de cors.
 AJAX
+
+Le CORS permet de prendre en charge des requêtes multi-origines sécurisées et des transferts de données entre des navigateurs et des serveurs web. Les navigateurs récents utilisent le CORS dans une API contenante comme XMLHttpRequest ou Fetch pour aider à réduire les risques de requêtes HTTP multi-origines.
 
 En effet
 ![image](https://user-images.githubusercontent.com/75088424/150301214-5ff2790b-36bd-4438-9661-ad5ed8ce28bc.png)
