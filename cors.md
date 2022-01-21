@@ -19,11 +19,17 @@ Si dans votre site vous avez utilisé une image d'une url externe et que vous av
 ![image](https://user-images.githubusercontent.com/75088424/150318851-ede8c42e-3b5c-42b3-a354-4f5464312f58.png)
 ou si votre site essaie de ramener des datas de votre API et que vous avez cette erreur
 ![erreurCors](https://user-images.githubusercontent.com/75088424/150319783-72f28081-499b-4e51-a993-fba9af69ca34.JPG)
-C'est qu'il faut absolument connaitre les cors! 
+C'est qu'il faut connaitre les cors! 
 
 
 ## Qu’est ce qu’un cors ?
-Une fonctionnalité, en quelques lignes de code du côté d’un serveur A qui va permettre au navigateur côté client de pouvoir faire des requêtes à un serveur B, C, D… Depuis 1995, Netscape 2, il y a cette règle de sécurité: "same-origin policy" (politique de même orgine). «  Cross-origin resource sharing » (CORS) ou « partage des ressources entre origines multiples »
+(illustrations CORS in 100 Seconds)
+C'est un mecanisme qui permet à un site web avec une url A de faire des requetes de datas sur d'autres url (B, C, D...). Sans cors, le site A ne peut faire que des requêtes vers son serveur A. 
+C'est dans le navigateur que ça se passe. Depuis 1995, Netscape 2, les navigateur appliquent une règle de sécurité: "same-origin policy" (politique de même orgine). les navigateurs, dans leur système de sécurité, ils autorisent donc un site web à demander librement des images et des dates depuis sa propre url. Mais bloque tout ce qui vient d'url externe sauf si certaines conditions sont réunies.
+
+Une fonctionnalité, en quelques lignes de code du côté d’un serveur A qui va permettre au navigateur côté client de pouvoir faire des requêtes à un serveur B, C, D… 
+
+ «  Cross-origin resource sharing » (CORS) ou « partage des ressources entre origines multiples »
 Oui question d'origine différentes dans des requêtes
 
 ### Comment ça marche en théorie ? 
