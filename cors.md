@@ -24,11 +24,9 @@ C'est qu'il faut connaitre les cors!
 
 ## Qu’est ce qu’un cors ?
 (illustrations CORS in 100 Seconds)
-C'est un mecanisme - un petit bout de code - qui permet à un site web avec une url A de faire des requetes de datas sur d'autres url (B, C, D...). Sans cors, le site A ne peut faire que des requêtes vers son serveur A, un serveur de la même origine. 
+C'est un mecanisme - un petit bout de code - qui permet à un site web avec une url A /serveur A de faire des requetes de datas sur d'autres url /serveur (B, C, D...). Sans cors, le site A ne peut faire que des requêtes vers son serveur A, un serveur de la même origine. 
 On comprend son nom: «  Cross-origin resource sharing » (CORS) ou « partage des ressources entre origines multiples ». Le cors permet de faire des requêtes réussies sur Url / serveur d'origine B, C, D...
-C'est dans le navigateur que ça se passe. Depuis 1995, Netscape 2, les navigateur appliquent une règle de sécurité: "same-origin policy" (politique de même orgine). les navigateurs, dans leur système de sécurité, ils autorisent donc un site web à demander librement des images et des dates depuis sa propre url. Mais bloque tout ce qui vient d'url externe sauf si certaines conditions sont réunies. A savoir la présence de cors chez A.
-Concrètement ça sert à quoi?
-Se protéger des failles de sécurité, en particulier: Cross site request forgery / XSRF dit c-surf
+C'est dans le navigateur que ça se passe. Depuis 1995, Netscape 2, les navigateur appliquent une règle de sécurité: "same-origin policy" (politique de même origine). les navigateurs, dans leur système de sécurité, ils autorisent donc un site web à demander librement des images et des dates depuis sa propre url. Mais bloque tout ce qui vient d'url externe sauf si certaines conditions sont réunies. A savoir la présence de cors chez A. Plus gnéralement, ça sert à se protéger des failles de sécurité, en particulier: Cross site request forgery / XSRF dit c-surf (falsification des requêtes inter sites)
 
 Cors:" j'accepte une requete cross origin / origine multiple dans ce cas particulier". C'est ce que dit l'erreur (critikart)
 
