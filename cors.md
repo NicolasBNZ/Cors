@@ -37,10 +37,10 @@ Si l'un de ces 3 éléments change, l'origine n'est plus la même.
 
 Exception (sur MDN comme une image cross origin)
 
-### Comment ça marche en théorie ? 
+### Comment ça marche ? 
 MDN
 https://developer.mozilla.org/fr/docs/Web/HTTP/CORS
-Le CORS est un mécanisme qui consiste à ajouter des en-têtes HTTP afin de permettre à un utilisateur d'accéder à des ressources d'un serveur situé sur une autre origine que le site courant. Un utilisateur réalise une requête HTTP multi-origine (cross-origin) lorsqu'il demande une ressource provenant d'un domaine, d'un protocole ou d'un port différent de ceux utilisés pour la page courante.
+Le mécanisme  consiste à ajouter des en-têtes HTTP afin de permettre à un utilisateur d'accéder aux ressources d'un serveur situé sur une autre origine que le site courant. l'utilisateur réalise une requête HTTP multi-origine (cross-origin) lorsqu'il demande une ressource provenant d'une origine différente (domaine, protocole ou  port) de celle utilisée pour la page courante.
 
 Pour des raisons de sécurité, les requêtes HTTP multi-origine émises depuis les scripts sont restreintes. Ainsi, XMLHttpRequest et l'API Fetch respectent la règle d'origine unique. Cela signifie qu'une application web qui utilise ces API peut uniquement émettre des requêtes vers la même origine que celle à partir de laquelle l'application a été chargée, sauf si des en-têtes CORS sont utilisés.
 
