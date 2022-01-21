@@ -7,6 +7,12 @@ https://www.youtube.com/watch?v=h-WtIT6gCBk
 https://www.youtube.com/watch?v=irpWV4effNE
 
 
+    https://datahub-api.analytics.safran
+
+    https://api.datasquare.analytics.safran
+
+
+
 Explication de l'origine (http...)
 https://www.youtube.com/watch?v=0IMz8d9Cby4
 
