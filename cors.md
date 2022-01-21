@@ -28,6 +28,8 @@ C'est un mecanisme - un petit bout de code - qui permet à un site web avec une 
 On comprend son nom: «  Cross-origin resource sharing » (CORS) ou « partage des ressources entre origines multiples ». Le cors permet de faire des requêtes réussies sur Url / serveur d'origine B, C, D...
 C'est dans le navigateur que ça se passe. Depuis 1995, Netscape 2, les navigateur appliquent une règle de sécurité: "same-origin policy" (politique de même orgine). les navigateurs, dans leur système de sécurité, ils autorisent donc un site web à demander librement des images et des dates depuis sa propre url. Mais bloque tout ce qui vient d'url externe sauf si certaines conditions sont réunies. A savoir la présence de cors chez A.
 
+protocole, port et domaine
+
 
 ### Comment ça marche en théorie ? 
 MDN
