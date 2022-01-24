@@ -53,7 +53,14 @@ pas grave, il y a datahub
 fetch('https://datahub-api.analytics.safran').then(response=>response.json())
 
 Ca ne marche pas
-Regardons l'erreur
+Regardons l'erreur: "has been blocked by CORS policy"
+
+
+QCM
+C'est quoi un cors alors?
+1 - ça fait mal au pied
+2 - un mécanisme - une petit bout de code - pour accepter une requête cross origin (origine croisée)
+3 - un formidable groupe de pop rock irlandais des années 2000
 
 
 ## Qu’est ce qu’un cors ?
