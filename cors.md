@@ -8,8 +8,11 @@ https://www.youtube.com/watch?v=irpWV4effNE
 
 
     https://datahub-api.analytics.safran
-
+fetch('https://datahub-api.analytics.safran').then(response=>response.json())
     https://api.datasquare.analytics.safran
+fetch('https://api.datasquare.analytics.safran').then(response=>response.json())
+
+fetch('https://swapi.dev/api/people').then(response=>response.json())
 
 
 ```
@@ -37,6 +40,20 @@ Si dans votre site vous avez utilisé une image d'une url externe et que vous av
 ou si votre site essaie de ramener des datas de votre API et que vous avez cette erreur
 ![erreurCors](https://user-images.githubusercontent.com/75088424/150319783-72f28081-499b-4e51-a993-fba9af69ca34.JPG)
 C'est qu'il faut connaitre les cors! 
+
+## intro bis
+On peut appeler une api depuis n'importe quel url.
+Ex google + api SW
+fetch('https://swapi.dev/api/people').then(response=>response.json())
+
+Parfait, je vais pouvoir récupérer toutes les données de datasquare
+fetch('https://api.datasquare.analytics.safran').then(response=>response.json())
+
+pas grave, il y a datahub
+fetch('https://datahub-api.analytics.safran').then(response=>response.json())
+
+Ca ne marche pas
+Regardons l'erreur
 
 
 ## Qu’est ce qu’un cors ?
