@@ -12,6 +12,17 @@ https://www.youtube.com/watch?v=irpWV4effNE
     https://api.datasquare.analytics.safran
 
 
+```
+fetch(URL, {
+  mode: 'cors',
+  headers: {
+    'Access-Control-Allow-Origin':'*'
+  }
+})
+  .then(response => response.json())
+  .then(data => {
+ ```
+
 
 Explication de l'origine (http...)
 https://www.youtube.com/watch?v=0IMz8d9Cby4
