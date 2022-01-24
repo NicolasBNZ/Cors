@@ -65,10 +65,16 @@ C'est quoi un cors alors?
 
 ## Qu’est ce qu’un cors ?
 (illustrations CORS in 100 Seconds)
-C'est un mecanisme - un petit bout de code - qui permet à un site web avec une url A /serveur A de faire des requetes de datas sur d'autres url /serveur (B, C, D...). Sans cors, le site A ne peut faire que des requêtes vers son serveur A, un serveur de la même origine. 
-On comprend son nom: «  Cross-origin resource sharing » (CORS) ou « partage des ressources entre origines multiples ». Le cors permet de faire des requêtes réussies sur Url / serveur d'origine B, C, D...
-C'est dans le navigateur que ça se passe. Depuis 1995, Netscape 2, les navigateur appliquent une règle de sécurité: "same-origin policy" (politique de même origine). les navigateurs, dans leur système de sécurité, ils autorisent donc un site web à demander librement des images et des dates depuis sa propre url. Mais bloque tout ce qui vient d'url externe sauf si certaines conditions sont réunies. A savoir la présence de cors chez A. Plus gnéralement, ça sert à se protéger des failles de sécurité, en particulier: Cross site request forgery / XSRF dit c-surf (falsification des requêtes inter sites)
-Les requêtes XMLHttpRequest et l'API Fetch respectent la règle "same-origin policy" d'origine unique. Cela signifie qu'une application web qui utilise ces API peut donc uniquement émettre des requêtes vers la même origine que celle à partir de laquelle l'application a été chargée, sauf si des CORS sont utilisés.
+C'est un mecanisme qui permet à un site web avec une url A de faire des requetes de datas sur d'autres url /serveur (B, C, D...). Sans cors chez B, C, D... lui autorisant l'accès, le site A ne peut faire que des requêtes vers son serveur A, un serveur de la même origine. 
+On comprend son nom: «  Cross-origin resource sharing » (CORS) ou « partage des ressources entre origines multiples / croisées ». Le cors permet de faire des requêtes réussies sur Url / serveur d'origine B, C, D...
+
+Le code est bien implémenté du coté serveur. Pourtant c'est dans le navigateur, du côté client que ça se passe. Depuis 1995, Netscape 2, les navigateur appliquent une règle de sécurité: "same-origin policy" (politique de même origine). les navigateurs, dans leur système de sécurité, ils autorisent donc un site web à demander librement des images et des datas depuis sa propre url. Mais bloque tout ce qui vient d'url externe sauf si certaines conditions sont réunies. A savoir la présence de cors chez A. 
+Exemple avec Datasquare.
+mais ça ne marche pas depuis la page.
+fetch('https://api.datasquare.analytics.safran').then(response=>response.json())
+
+Plus gnéralement, ça sert à se protéger des failles de sécurité, en particulier: Cross site request forgery / XSRF dit c-surf (falsification des requêtes inter sites)
+Les requêtes XMLHttpRequest et l'API Fetch respectent la règle "same-origin policy" d'origine unique. Cela signifie qu'une application web qui utilise ces API peut donc uniquement émettre des requêtes vers la même origine que celle à partir de laquelle l'application a été chargée. Si elle veut émettre des requêtes vers d'autres origines, elles devront avoir un CORS qui l'y autorise.
 
 Cors:" j'accepte une requete cross origin (origine multiple) dans ce ou ces cas particulier(s)". C'est ce que dit l'erreur (critikart)
 
