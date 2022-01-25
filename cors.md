@@ -2,6 +2,7 @@ Questions
 Pourquoi quand je suis sur le site de datasquare, je n'ai pas accès à sa BDD?
 C'estquoi la différence entre faire un fetch sur la page de google et entrer l'url dans la barre d'adresse?
 Est ce que le cors doit être paramétré pour sa propre bdd si on veut restrindre ? Que du Get, etc... je pense que non. Et pour les authetifications fortes? (cookie)
+Quel intéret pov client, serveur?
 
 
 
