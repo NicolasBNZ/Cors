@@ -1,5 +1,5 @@
 Questions
-Pourquoi quand je suis sur le site de datasquare, je n'ai pas accès à sa BDD?
+ils autorisent donc un site web à demander librement des images et des datas depuis sa propre url. Pourquoi quand je suis sur le site de datasquare, je n'ai pas accès à sa BDD avec le lien de l'api?
 C'estquoi la différence entre faire un fetch sur la page de google et entrer l'url dans la barre d'adresse?
 Est ce que le cors doit être paramétré pour sa propre bdd si on veut restrindre ? Que du Get, etc... je pense que non. Et pour les authetifications fortes? (cookie)
 Quel intéret pov client, serveur?
@@ -71,24 +71,24 @@ C'est quoi un cors alors?
 3 - un formidable groupe de pop rock irlandais des années 2000
 
 
-## Qu’est ce qu’un cors ?
+
+## à quoi ça sert un cors ?
 (illustrations CORS in 100 Seconds)
 C'est un mecanisme qui permet à un site web avec une url A de faire des requetes de datas sur d'autres url /serveur (B, C, D...). Sans cors chez B, C, D... lui autorisant l'accès, le site A ne peut faire que des requêtes vers son serveur A, un serveur de la même origine. 
 On comprend son nom: «  Cross-origin resource sharing » (CORS) ou « partage des ressources entre origines multiples / croisées ». Le cors permet de faire des requêtes réussies sur Url / serveur d'origine B, C, D...
 
 Le code est bien implémenté du coté serveur. Pourtant c'est dans le navigateur, du côté client que ça se passe. Depuis 1995, Netscape 2, les navigateur appliquent une règle de sécurité: "same-origin policy" (politique de même origine). les navigateurs, dans leur système de sécurité, ils autorisent donc un site web à demander librement des images et des datas depuis sa propre url. Mais bloque tout ce qui vient d'url externe sauf si certaines conditions sont réunies. A savoir la présence de cors chez A. 
 Exemple avec Datasquare.
-mais ça ne marche pas depuis la page.
+mais ça ne marche pas depuis la page!
 fetch('https://api.datasquare.analytics.safran').then(response=>response.json())
 
-Plus gnéralement, ça sert à se protéger des failles de sécurité, en particulier: Cross site request forgery / XSRF dit c-surf (falsification des requêtes inter sites)
+Plus généralement, ça sert à se protéger des failles de sécurité, en particulier: Cross site request forgery / XSRF dit c-surf (falsification des requêtes inter sites)
 Les requêtes XMLHttpRequest et l'API Fetch respectent la règle "same-origin policy" d'origine unique. Cela signifie qu'une application web qui utilise ces API peut donc uniquement émettre des requêtes vers la même origine que celle à partir de laquelle l'application a été chargée. Si elle veut émettre des requêtes vers d'autres origines, elles devront avoir un CORS qui l'y autorise.
 
 Cors:" j'accepte une requete cross origin (origine multiple) dans ce ou ces cas particulier(s)". C'est ce que dit l'erreur (critikart)
 
 On parle d'origine, c'est quoi l'origine? C'est la combinaisons protocole, domaine et port
 Si l'un de ces 3 éléments change, l'origine n'est plus la même.
-
 
 Il y a quelques exceptions (sur MDN comme une image cross origin)
 
@@ -106,11 +106,12 @@ Le standard CORS fonctionne grâce à l'ajout de nouveaux en-têtes HTTP qui per
 
 #### requête necessitant une requête préliminaire
 
-De plus, pour les méthodes de requêtes HTTP qui entraînent des effets de bord sur les données côté serveur (notamment pour les méthodes en dehors de GET ou pour les méthodes POST utilisées avec certains types MIME), la spécification indique que les navigateurs doivent effectuer une requête préliminaire (« preflight request ») et demander au serveur les méthodes prises en charges via une requête utilisant la méthode OPTIONS puis, après approbation du serveur, envoyer la vraie requête. 
+Pour les méthodes de requêtes HTTP qui entraînent des effets de bord sur les données côté serveur (notamment pour les méthodes en dehors de GET ou pour les méthodes POST utilisées avec certains types MIME), la spécification indique que les navigateurs doivent effectuer une requête préliminaire (« preflight request ») et demander au serveur les méthodes prises en charges via une requête utilisant la méthode OPTIONS puis, après approbation du serveur, envoyer la vraie requête. 
 
 #### requêtes avec informations d'authentification
 
 Les serveurs peuvent également indiquer aux clients s'il est nécessaire de fournir des informations d'authentification (que ce soit des cookies ou des données d'authentification HTTP) avec les requêtes.
+Par défaut les cookies sont bloqués. Dans la requête, la commande fetch, il faut ajouter credential include. Mais surtout, du côté de l'autre origine, il faut accepter dans le cors (credential à true).
 
 
 
