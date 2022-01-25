@@ -103,15 +103,18 @@ l'utilisateur réalise alors une requête HTTP multi-origine (cross-origin) séc
 #### requête simple
 
 Le standard CORS fonctionne grâce à l'ajout de nouveaux en-têtes HTTP qui permettent aux serveurs de décrire un ensemble d'origines autorisées pour lire l'information depuis un navigateur web.
+Acces-Control-Allow-Origin
 
 #### requête necessitant une requête préliminaire
 
 Pour les méthodes de requêtes HTTP qui entraînent des effets de bord sur les données côté serveur (notamment pour les méthodes en dehors de GET ou pour les méthodes POST utilisées avec certains types MIME), la spécification indique que les navigateurs doivent effectuer une requête préliminaire (« preflight request ») et demander au serveur les méthodes prises en charges via une requête utilisant la méthode OPTIONS puis, après approbation du serveur, envoyer la vraie requête. 
+Acces-Control-Allow-Headers
 
 #### requêtes avec informations d'authentification
 
 Les serveurs peuvent également indiquer aux clients s'il est nécessaire de fournir des informations d'authentification (que ce soit des cookies ou des données d'authentification HTTP) avec les requêtes.
 Par défaut les cookies sont bloqués. Dans la requête, la commande fetch, il faut ajouter credential include. Mais surtout, du côté de l'autre origine, il faut accepter dans le cors (credential à true).
+Acces-Control-Allow-Credentials
 
 
 
