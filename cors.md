@@ -1,8 +1,8 @@
 Questions
 ils autorisent donc un site web à demander librement des images et des datas depuis sa propre url. Pourquoi quand je suis sur le site de datasquare, je n'ai pas accès à sa BDD avec le lien de l'api?
-C'estquoi la différence entre faire un fetch sur la page de google et entrer l'url dans la barre d'adresse?
-Est ce que le cors doit être paramétré pour sa propre bdd si on veut restrindre ? Que du Get, etc... je pense que non. Et pour les authetifications fortes? (cookie)
-Quel intéret pov client, serveur?
+C'est quoi la différence entre faire un fetch sur la page de google et entrer l'url dans la barre d'adresse?
+Est ce que le cors doit être paramétré pour sa propre bdd si on veut restreindre ? Que du Get, etc... je pense que non. Et pour les authetifications fortes? (cookie)
+Quel intéret pov client, serveur? Qui implémente le cors? Il est du côté serveur. Mais quel serveur? Pas celui qui fait le fetch, l'autre. Celui qui reçoit la requête.
 
 
 
@@ -21,6 +21,7 @@ fetch('https://datahub-api.analytics.safran').then(response=>response.json())
 fetch('https://api.datasquare.analytics.safran').then(response=>response.json())
 
 fetch('https://swapi.dev/api/people').then(response=>response.json())
+fetch('https://swapi.py4e.com/api/people').then(response=>response.json())
 
 
 ```
