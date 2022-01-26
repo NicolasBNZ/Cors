@@ -86,7 +86,7 @@ fetch('https://api.datasquare.analytics.safran').then(response=>response.json())
 Plus généralement, ça sert à se protéger des failles de sécurité, en particulier: Cross site request forgery / XSRF dit c-surf (falsification des requêtes inter sites)
 Les requêtes XMLHttpRequest et l'API Fetch respectent la règle "same-origin policy" d'origine unique. Cela signifie qu'une application web qui utilise ces API peut donc uniquement émettre des requêtes vers la même origine que celle à partir de laquelle l'application a été chargée. Si elle veut émettre des requêtes vers d'autres origines, elles devront avoir un CORS qui l'y autorise.
 
-Cors:" j'accepte une requete cross origin (origine multiple) dans ce ou ces cas particulier(s)". C'est ce que dit l'erreur (critikart)
+Cors:" j'accepte une requete cross origin (origine multiple / croisée) dans ce ou ces cas particulier(s)". C'est ce que dit l'erreur (critikart)
 
 On parle d'origine, c'est quoi l'origine? C'est la combinaisons protocole, domaine et port
 Si l'un de ces 3 éléments change, l'origine n'est plus la même.
