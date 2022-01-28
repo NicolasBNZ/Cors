@@ -134,10 +134,23 @@ En effet
 ![image](https://user-images.githubusercontent.com/75088424/150301214-5ff2790b-36bd-4438-9661-ad5ed8ce28bc.png)
 
 
-
+    Access-Control-Allow-Origin : quelle origine est autorisée ?
+    Access-Control-Allow-Credentials : les requêtes sont-elles autorisées même si le Credentials Mode est réglé en include ?
+    Access-Control-Allow-Headers : quels en-têtes peuvent être utilisés ?
+    Access-Control-Allow-Methods : quelles méthodes de requête HTTP sont autorisées ?
+    Access-Control-Expose-Headers : quels en-têtes peuvent être affichés ?
+    Access-Control-Max-Age : quel est le délai de validité de la requête préliminaire ?
+    Access-Control-Request-Headers : quel en-tête HTTP est spécifié dans la requête préliminaire ?
+    Access-Control-Request-Method : quelle méthode HTTP est spécifiée dans la requête préliminaire ?
+    Origin : quelle est la source de la requête ?
 
 A quoi ça sert ? Où, quand et comment ?
 
 Pourquoi c’est important ?
 
 Cas pratique ? DataSquare ?
+Avantages et inconvénients du CORS
+
+En réalité, le CORS sert à contourner un certain réglage de base, à savoir la Same-Origin Policy. La SOP, représente quant à elle un moyen efficace de prévenir les connexions potentiellement dangereuses. Cependant, Internet est souvent basé sur de telles Cross-Origin Requests, en raison du grand nombre de demandes de connexion d’un hôte à un autre.
+
+CORS offre donc une solution provisoire : des exceptions peuvent être créées à l'aide de CORS pour les situations dans lesquelles des Cross-Origin Requests sont explicitement requises. Toutefois, pour des raisons de commodité, il existe un risque que les exploitants de sites Web n'utilisent que des caractères wildcards qui permettraient d’annuler toute protection de la SOP. Il est donc important de n'utiliser CORS que dans certains cas particuliers, et de le configurer de manière aussi restrictive que possible.
