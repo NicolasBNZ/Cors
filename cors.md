@@ -4,7 +4,11 @@ Quand je fais un fetch dans la console de la barre google, ça simule le fait qu
 
 Dans la théorie, je suis sur le site de facebook, je tape l'adresse de l'api facebook, j'ai accès à tout!
 
-Pourquoi une ip et un FQDN peuvent matcher? C’est grâce au DNS?
+On parle d'origine, c'est quoi l'origine? C'est la combinaisons protocole, domaine et port
+Si l'un de ces 3 éléments change, l'origine n'est plus la même. A vérifier - Est-ce VRAI? 
+ A VERIFIER! Pourquoi une ip et un FQDN peuvent matcher? C’est grâce au DNS?
+![image](https://user-images.githubusercontent.com/75088424/151581966-8251bee5-dd14-4178-9dba-7ad92ca560ed.png)
+
 
 
 
