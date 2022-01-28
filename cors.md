@@ -4,6 +4,9 @@ Quand je fais un fetch dans la console de la barre google, ça simule le fait qu
 
 Dans la théorie, je suis sur le site de facebook, je tape l'adresse de l'api facebook, j'ai accès à tout!
 
+Pourquoi une ip et un FQDN peuvent matcher? C’est grâce au DNS?
+
+
 
 
 # Les cors
