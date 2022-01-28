@@ -154,3 +154,17 @@ Avantages et inconvénients du CORS
 En réalité, le CORS sert à contourner un certain réglage de base, à savoir la Same-Origin Policy. La SOP, représente quant à elle un moyen efficace de prévenir les connexions potentiellement dangereuses. Cependant, Internet est souvent basé sur de telles Cross-Origin Requests, en raison du grand nombre de demandes de connexion d’un hôte à un autre.
 
 CORS offre donc une solution provisoire : des exceptions peuvent être créées à l'aide de CORS pour les situations dans lesquelles des Cross-Origin Requests sont explicitement requises. Toutefois, pour des raisons de commodité, il existe un risque que les exploitants de sites Web n'utilisent que des caractères wildcards qui permettraient d’annuler toute protection de la SOP. Il est donc important de n'utiliser CORS que dans certains cas particuliers, et de le configurer de manière aussi restrictive que possible.
+
+CORS est-il une mauvaise chose ?
+
+Comme pour les superpouvoirs, il s'agit de savoir comment les utiliser. Par conséquent, CORS n'est pas nécessairement une mauvaise chose. Nous avons vu dans de nombreux cas que CORS a un usage légitime, et c'est pourquoi il a été inventé et est devenu une norme Web en premier lieu. Cependant, vous devez être conscient de la configuration CORS que vous mettez en place sur votre serveur et des effets secondaires qu'elle a sur la sécurité.
+Que dois-je prendre en compte ?
+
+En gros, vous devez faire une distinction :
+
+    Qui a un besoin légitime d'accès ? Peut-être n'y a-t-il qu'un site Web spécifique ou un petit ensemble de sites Web qui ont besoin d'un accès. Si c'est le cas, dressez-en la liste. Pour le dire autrement, vous ajoutez des sites web spécifiques à une "liste blanche" de domaines acceptés.
+    Tous les points d'accès doivent-ils être exposés ? Examinez vos différents points d'extrémité et vous verrez peut-être qu'ils ont des utilisations légitimes différentes qui nécessitent des configurations CORS différentes.
+    Quels sont les effets secondaires pour les points d'extrémité fournissant des données ? Certains points de terminaison, généralement les points de terminaison verbaux GET, fourniront des données mais ne modifieront rien dans l'état de votre serveur (ne modifieront pas l'état d'authentification ou les données stockées). Pour ces points d'extrémité, vérifiez si les données que vous fournissez sont confidentielles et si les origines CORS autorisées ont une raison légitime de les demander.
+    Et les effets sur les points d'extrémité qui modifient les données ? D'autres points d'extrémité, généralement les points d'extrémité des verbes POST/DELETE/PUT, fournissent des données mais modifient également l'état de votre serveur. Dans ce cas, le risque est plus élevé car CORS peut être utilisé pour déclencher des actions involontaires, telles que la modification des données de l'utilisateur, la modification des informations de connexion, l'envoi d'e-mails, etc.
+    Qu'en est-il des services tiers ? Si vous devez fournir une API à des tiers, il est bon que vous implémentiez l'autorisation d'une manière qui requiert le consentement de l'utilisateur. Par exemple, OAuth vous permet d'autoriser des sites Web et des applications tiers et requiert le consentement explicite de l'utilisateur.
+
